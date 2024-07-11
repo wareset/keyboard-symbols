@@ -1,0 +1,52 @@
+{
+  "name": "keyboard-symbols",
+  "version": "1.0.0",
+  "description": "wip",
+  "keywords": [
+    "keyboard-symbols"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wareset/keyboard-symbols#readme",
+  "bugs": {
+    "url": "https://github.com/wareset/keyboard-symbols/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wareset/keyboard-symbols.git"
+  },
+  "author": "rease <cftcview@gmail.com>",
+  "main": "index",
+  "module": "index.mjs",
+  "types": "types/index.d.ts",
+  "files": [
+    "README.md",
+    "index.d.ts",
+    "index.js",
+    "index.mjs",
+    "pixi/**/*",
+    "types/**/*"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./pixi": {
+      "import": "./pixi/index.mjs",
+      "require": "./pixi/index.js",
+      "types": "./types/pixi.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "dester -m",
+    "dev": "dester -mw",
+    "gen-test": "nodemon --watch ./gen --ext mjs --inspect ./gen/test.mjs"
+  },
+  "devDependencies": {
+    "dester": "1.0.x",
+    "nodemon": "^3.1.1",
+    "typescript": "^5.2.2"
+  }
+}
